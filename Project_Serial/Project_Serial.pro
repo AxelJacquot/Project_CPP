@@ -27,10 +27,12 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
+    param_led.cpp \
     serial.cpp
 
 HEADERS += \
         mainwindow.h \
+    param_led.h \
     serial.h
 
 # Default rules for deployment.
