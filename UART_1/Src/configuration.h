@@ -11,13 +11,10 @@
 #include "stm32f4xx_hal.h"
 
 #define LED_PORT	GPIOD
-#define BUTTON_PORT	GPIOA
 #define GREEN		GPIO_PIN_12
 #define ORANGE		GPIO_PIN_13
 #define RED			GPIO_PIN_14
 #define BLUE 		GPIO_PIN_15
-#define BUTTON0		GPIO_PIN_0
-#define TIMER4		4
 #define LED_ALL		GREEN | ORANGE | RED | BLUE
 #define GRE_ORA		GREEN | ORANGE
 #define BLU_RED		RED | BLUE

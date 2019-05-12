@@ -20,8 +20,6 @@ public:
     void init_port();
     ~MainWindow();
 
-
-
 public slots:
     void transmitCombo(int);
     void transmitCAN(void);
@@ -29,7 +27,7 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
-    QSerialPort* m_serial;
+    QSerialPort* m_serial;  //Objet de la communication série
 };
 
 #endif // MAINWINDOW_H
