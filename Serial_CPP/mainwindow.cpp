@@ -60,13 +60,11 @@ void MainWindow::readData() //Slot récupérant la donnée se trouvant sur le bu
 {
      QByteArray buf=m_serial->readAll();    //Récupération de la donnée
 
-     QDataStream in(buf);   //Traitement de la donnée reçue pour pouvoir la stocker dans un int
-     in.setByteOrder(QDataStream::LittleEndian);
-     qint16 result_tmp;
-     in >> result_tmp;
+     unsigned char result_tmp = buf[0];
+     buf.clear();
 
      double result = 0;
-     result = 3.3 * (result_tmp/255);   //Calcul de la tension reçu
+     result = 3.3 * ((double)result_tmp/255);   //Calcul de la tension reçu
 
     ui->lcdNumber->display(result);     //Affichage de la tension reçu
 }
